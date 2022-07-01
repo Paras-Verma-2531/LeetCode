@@ -1,3 +1,5 @@
+package ARRAYS;
+
 public class PeakIndex {
     /*
     Ques: find the peak index in the given array:
