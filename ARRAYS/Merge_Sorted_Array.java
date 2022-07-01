@@ -1,5 +1,4 @@
 package ARRAYS;
-
 public class Merge_Sorted_Array {
     // merge two sorted Array where length of first array is "1+2"array
     // m is original length of first array
