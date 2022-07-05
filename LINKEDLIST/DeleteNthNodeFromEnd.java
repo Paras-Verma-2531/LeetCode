@@ -6,7 +6,7 @@ public class DeleteNthNodeFromEnd {
     then till fast!=null
     iterate fast and slow
     this will bring slow to one node before the node which is to deleted.d:
-    
+
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy= new ListNode(-1,head);
