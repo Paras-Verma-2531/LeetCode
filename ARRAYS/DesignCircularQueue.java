@@ -2,7 +2,7 @@ package ARRAYS;
 public class DesignCircularQueue {
     /*
     Ques : Implement Circular Queue
-    
+
      */
     int front = -1, rear = -1, size = 0;
     int arr[];
