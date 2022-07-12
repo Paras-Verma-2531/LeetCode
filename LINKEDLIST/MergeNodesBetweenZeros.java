@@ -3,29 +3,32 @@ public class MergeNodesBetweenZeros {
     /*
     Ques::For every two consecutive 0's, merge all the nodes lying in between them into a single node whose value is the sum of all the merged nodes.
     The modified list should not contain any 0's.
-    Approach:: create dummy node with value -1;
-    and start the loop from the head.next till it !=null
-    also check till temp.val!=0 and do the sum
-    create a newnode with sum value and point it to the dummy.
+    Approach:: O(N)
+    initialise a dummy  node and a newhead which points to it.
+    run a loop till temp!=null [where temp=head.next]
+    if(temp.val!=0)-->do sum
+    else
+    make newnode of the sum and initialise sum with 0 and set the pointers.
+    make temp=temp.next;
     return dummy.next
      */
     public ListNode mergeNodes(ListNode head) {
         ListNode dummy=new ListNode(-1);
-        ListNode newhead=dummy;
-        ListNode temp=head.next;
-        int sum=0;
+        ListNode nhead=dummy;
+        ListNode temp=head.next;int sum=0;
         while(temp!=null)
         {
-            while(temp.val!=0)
+            if(temp.val!=0)
             {
                 sum+=temp.val;
-                temp=temp.next;
             }
-            ListNode newnode=new ListNode(sum);
-            newhead.next=newnode;
-            newhead=newhead.next;
-            temp=temp.next;
-            sum=0;
+            else
+            {
+                ListNode newnode=new ListNode(sum);
+                nhead.next=newnode;
+                nhead=nhead.next;
+                sum=0;
+            }temp=temp.next;
         }return dummy.next;
     }
 }
