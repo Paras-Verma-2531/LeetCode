@@ -19,9 +19,7 @@ public class MergeNodesBetweenZeros {
         while(temp!=null)
         {
             if(temp.val!=0)
-            {
                 sum+=temp.val;
-            }
             else
             {
                 ListNode newnode=new ListNode(sum);
