@@ -8,11 +8,11 @@ public class Intersection_Y_Shaped {
     Approach : add one of the list to the hashmap and then check for the second if it's next is present in
     the map, if yes{return next.data, else -1}
      */
-    class Node
+     class Node
     {
         private int data;
         private Node next;
-        Node(int data){this.data=data;this.next=null;}
+         Node(int data){this.data=data;this.next=null;}
     }
     int intersectPoint(Node head1, Node head2)
     {
