@@ -6,8 +6,7 @@ public class DeleteLoop {
     Ques: if loop is present in the list,remove the loop
     Approach: insert a dummy node at the beginning and check if its next is present in the map{if yes:: make it null}else
     put it into map:
-    
-     */
+*/
     class Node
     {
         int data;
