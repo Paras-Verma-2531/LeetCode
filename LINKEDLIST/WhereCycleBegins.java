@@ -5,7 +5,7 @@ public class WhereCycleBegins {
     Approach: check if the cycle is present or not using floyd's cycle detection algo
     if present: start the loop till temp!=slow and return temp[temp will point to the node where cycle begins]
     make temp and slow temp.next.slow.next
-    
+
      */
     public ListNode cycle(ListNode slow,ListNode fast)
     {
