@@ -1,5 +1,8 @@
 package TREE;
 public class TreeNode {
+    /*
+    TreeNode class for tree creation
+     */
     int val;
         TreeNode left;
         TreeNode right;
