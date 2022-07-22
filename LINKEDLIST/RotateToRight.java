@@ -1,7 +1,7 @@
 package LINKEDLIST;
 public class RotateToRight {
     /*
-    Ques: 
+    Ques: Given the head of a linked list, rotate the list to the right by k places.
      */
     public ListNode insertAtHead(ListNode head)
     {
