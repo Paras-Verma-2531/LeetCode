@@ -1,7 +1,7 @@
 package TREE;
 import java.util.LinkedList;
 public class SortedListToBinaryTree {
-    
+
     public TreeNode makeTree(int start,int end,LinkedList<Integer>list)
     {
         if(start>end)
