@@ -24,4 +24,31 @@ We will use the integers 0, 1, and 2 to represent the color red, white, and blue
                 nums[i]=2;
         }
     }
+    /*
+    2nd Approach :: One-Pass
+     public void swap(int i,int j,int[] arr)
+    {
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
+    public void sortColors(int[] nums) {
+        int start=0,end=nums.length-1,mid=0;
+        while(mid<=end)
+        {
+            switch(nums[mid])
+            {
+                case 0:
+                    swap(start++,mid++,nums);
+                    break;
+                case 1:
+                    mid++;
+                    break;
+                case 2:
+                    swap(end--,mid,nums);
+                    break;
+            }
+        }
+    }
+     */
 }
