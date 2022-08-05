@@ -19,7 +19,7 @@ If index equals the length of the linked list, the node will be appended to the 
 void deleteAtIndex(int index) Delete the indexth node in the linked list, if the index is valid
      */
     class Node
-    {
+    { //make a class Node whith data and node reference as it's data type
         int data;Node next;
         Node(int data)
         {
@@ -29,7 +29,7 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
     }private Node head=null;private int length=0;
     public MyLinkedList() {}
     public int get(int index) {
-        if(index<0||index>=length)
+        if(index<0||index>=length)// invalid index
             return -1;
         Node curr=head;int i=0;
         while(i++<index)
@@ -54,7 +54,7 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
                 curr=curr.next;
             curr.next=node;
         }else
-            head=node;
+            head=node;//when head is null
         length++;
     }
 
@@ -64,7 +64,7 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
             addAtHead(val);
         else if(index==length)
             addAtTail(val);
-        else if(index>0&&index<length)
+        else
         {
             Node curr=head;int i=0;
             Node node=new Node(val);
@@ -75,21 +75,18 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
         }
     }
     public void deleteAtIndex(int index) {
-        if(head.next==null)
-        {
-            head=null;length--;return;
-        }
+        if(index<0||index>=length)return;//invalid condition
         if(index==0)
-            head=head.next;
-        else if(index>0&&index<=length)
-        {Node curr=head;int i=0;
-            while(i++<index-1)
-                curr=curr.next;
-            curr.next=curr.next.next;
-        }
+            head=head.next;//if index is 0
         else
-            return;
-        length--;
+        {
+            Node curr=head,prev=null;int i=0;
+            while(i!=index)
+            {
+                prev=curr;
+                curr=curr.next;i++;
+            }prev.next=curr.next;
+        }length--;
     }
 }
 
