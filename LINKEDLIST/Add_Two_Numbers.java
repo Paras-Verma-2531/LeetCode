@@ -17,18 +17,13 @@ public class Add_Two_Numbers {
             int val2=l2!=null?l2.val:0;
             sum=val1+val2+carry;
             carry=sum/10;
-            int final_sum=sum%10;
-            ListNode node=new ListNode(final_sum);
-            temp.next=node;
+            temp.next=new ListNode(sum%10);
             if(l1!=null)l1=l1.next;
             if(l2!=null)l2=l2.next;
             temp=temp.next;
         }
         if(carry!=0)
-        {
-            ListNode node=new ListNode(carry);
-            temp.next=node;
-            temp=temp.next;
-        }return dummy.next;
+            temp.next=new ListNode(carry);
+        return dummy.next;
     }
 }
