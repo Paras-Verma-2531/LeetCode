@@ -10,8 +10,8 @@ public class DeleteNthNodeFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy= new ListNode(-1,head);
         head=dummy;
-        ListNode slow=head,fast=head;
-        for(int i=1;i<=n+1;i++)
+        ListNode slow=head,fast=head;int i=0;
+        while(i++<n+1)
             fast=fast.next;
         while(fast!=null)
         {
