@@ -36,7 +36,6 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
             curr=curr.next;
         return curr.data;
     }
-
     public void addAtHead(int val) {
         Node node=new Node(val);
         if(head!=null)
@@ -44,7 +43,6 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
         head=node;
         length++;
     }
-
     public void addAtTail(int val) {
         Node node=new Node(val);
         Node curr=head;
@@ -57,7 +55,6 @@ void deleteAtIndex(int index) Delete the indexth node in the linked list, if the
             head=node;//when head is null
         length++;
     }
-
     public void addAtIndex(int index, int val) {
         if(index>length)return;
         if(index==0)
