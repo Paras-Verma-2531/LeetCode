@@ -23,7 +23,7 @@ public class Flatten_DoubleLinkedList {
         Node curr = head;
         while (curr != null) {
             if (curr.child != null) {
-                if (curr.next != null) stack.push(curr.next);
+                if (curr.next != null) stack.push(curr.next);//if it is null don't push it
                 curr.child.prev = curr;
                 curr.next = curr.child;
             }
