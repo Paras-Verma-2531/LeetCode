@@ -2,7 +2,7 @@ package TREE;
 import java.util.LinkedList;
 public class SortedListToBinaryTree {
 /*
-Ques: Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+Ques: Given the head of a singly sorted linked list where elements are sorted in ascending order, convert it to a height balanced BST.
  */
     public TreeNode makeTree(int start,int end,LinkedList<Integer>list)
     {
