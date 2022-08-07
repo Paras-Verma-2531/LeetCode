@@ -10,16 +10,12 @@ public class InsertionSortList {
         while(curr!=null)
         {
             ListNode temp=dummy;
-
             while(temp.next!=null&&temp.next.val<curr.val)
                 temp=temp.next;
-
             ListNode next=curr.next;
             curr.next=temp.next;
             temp.next=curr;
             curr=next;
-
         }return dummy.next;
-
     }
 }
