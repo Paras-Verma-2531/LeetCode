@@ -29,11 +29,11 @@ public class Maximum_Twin_Sum {
     public int pairSum(ListNode head) {
         ListNode mid=middle(head,head);
         ListNode temp=reverse(mid);
-        ListNode curr=head;int sum=0;
+        ListNode curr=head;int sum=0,newsum=0;
         while(temp!=null)
         {
-            if(sum<(curr.val+temp.val))
-                sum=curr.val+temp.val;
+            newsum=temp.val+curr.val;
+            sum=Math.max(sum,newsum);
             curr=curr.next;
             temp=temp.next;
         }return sum;
