@@ -15,7 +15,7 @@ After doing so, return the head of the final linked list.  You may return any su
         while(temp!=null)
         {
             sum+=temp.val;
-            map.put(sum,temp);
+            map.put(sum,temp);//it will update the value if key already exists.
             temp=temp.next;
         }sum=0;
         temp=dummy;
@@ -25,8 +25,8 @@ After doing so, return the head of the final linked list.  You may return any su
             if(map.containsKey(sum))
             {
                 ListNode node=map.get(sum);
-                if(temp!=node)
-                    temp.next=node.next;
+                if(temp!=node)// to check if we are on the same node
+                    temp.next=node.next;// point to it's next node
             }temp=temp.next;
         }return dummy.next;
     }
