@@ -14,7 +14,25 @@ Return the maximum such product difference
         :: return the product of length-1*length-2 & nums[0]*nums[1]
         Arrays.sort(nums);
         return nums[nums.length-1]*nums[nums.length-2]-nums[0]*nums[1];
-
-         */
+*/
+        // 2nd approach ::O(N)
+        // update max and secmax ,min and secmin
+        int max=-1,secmax=-1;
+        int min=10001,secmin=10001;
+        for(int i: nums)
+        {
+            if(i>=max)
+            {
+                secmax=max;
+                max=i;
+            }else if(i>=secmax)
+                secmax=i;
+            if(i<=min)
+            {
+                secmin=min;
+                min=i;
+            }else if(i<=secmin)
+                secmin=i;
+        }return (max*secmax)-(min*secmin);
     }
 }
