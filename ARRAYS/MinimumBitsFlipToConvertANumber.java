@@ -8,6 +8,16 @@ public class MinimumBitsFlipToConvertANumber {
             if((xor&1)==1)count++;// if no is odd means [1 is present at last bit]
             xor>>=1;// reduces the no by one bit
         }
+        /*
+        Another approach::
+         while(xor!=0)
+         {
+         count++;
+         xor=xor&(xor-1) ----> this will change the set bit to 0 i,e 1-->0
+         1101-->1100
+         1100-->1000
+         1000-->0000
+         */
         return count;
     }
 }
