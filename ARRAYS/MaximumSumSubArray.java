@@ -6,7 +6,10 @@ public class MaximumSumSubArray {
 A subarray is a contiguous part of an array
      */
     /*
+    ----------------------------------
+    ----------------------------------
     BruteForce approach:: O(N^2)----> TLE
+    ====================================
     ---find all the subarrays and check if at any point of time sum>max:: update the max
     at the end return max
     public int maxSubArray(int[] nums) {
@@ -23,4 +26,16 @@ A subarray is a contiguous part of an array
         }return max;
     }
   */
+    //Optimization Using Kadane's Algorithm[Maximum sum subArray] O(N), O(1)
+    public int maxSubArray(int[] nums) {
+        int max=-10001,sum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            max=Math.max(max,sum);
+            if(sum<0)//if at any point of time sum<0 make the sum=0 i,e neglect the whole subArray
+                sum=0;
+        }return max;
+    }
+}
 }
