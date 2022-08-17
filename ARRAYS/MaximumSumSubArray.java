@@ -38,4 +38,4 @@ A subarray is a contiguous part of an array
         }return max;
     }
 }
-}
+
