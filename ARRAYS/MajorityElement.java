@@ -23,4 +23,4 @@ You may assume that the majority element always exists in the array.
         }return 0;
     }
 }
-}
+
