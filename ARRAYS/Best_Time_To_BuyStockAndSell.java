@@ -22,4 +22,23 @@ Return the maximum profit you can achieve from this transaction
             max=Math.max(max,profit);
         }return max;
     }
+    /*
+    ====================================
+     Space used:: O(n) T-->O(N)
+     ===================================
+     make an array which eill store the max for each i th index [length-1....0]
+     now find the max using for loop [max=Math.max(max.arr[i]-prices[i]);
+     return max;
+     ----------------------------------
+    public int maxProfit(int[] prices) {
+    int[] arr=new int[prices.length];
+        int max=prices[prices.length-1];
+        for(int i=prices.length-1;i>=0;i--)
+           arr[i]=max=Math.max(prices[i],max);// find the max for each index
+        max=0;
+        for(int i=0;i<prices.length;i++)
+           max=Math.max(max,arr[i]-prices[i]);
+        return max;
+        }
+     */
 }
