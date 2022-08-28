@@ -5,7 +5,7 @@ public class First_And_Last_Index {
     find the starting and ending position of a given target value.
 If target is not found in the array, return [-1, -1].
      */
-    //=====================================================
+    //======================================================
     //focuses on finding the leftmost index where aa[index]==target
     //[[arr[mid]==target]] should be the last statement:: to prevent TLE
     private int findFirst(int[] arr,int target)
