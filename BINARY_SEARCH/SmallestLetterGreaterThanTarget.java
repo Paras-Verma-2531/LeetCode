@@ -9,7 +9,7 @@ For example, if target == 'z' and letters == ['a', 'b'], the answer is 'a
     //Approach : Binary Search ---> TC 0(Logn)
     public char nextGreatestLetter(char[] arr, char target) {
         int start=0,end=arr.length-1;
-        if(arr[end]<=target)return arr[start];
+        //if(arr[end]<=target)return arr[start];
         while(start<=end)
         {
             int mid=start+(end-start)/2;
@@ -17,6 +17,7 @@ For example, if target == 'z' and letters == ['a', 'b'], the answer is 'a
             if(arr[mid]>target)end=mid-1;
             else
                 start=mid+1;
-        }return start<arr.length?arr[start]:arr[start-1];
+        }//return start<arr.length?arr[start]:arr[start-1];
+        return arr[start%arr.length];//if start is at arr.length it will return arr[0] as (length%length=0)
     }
 }
