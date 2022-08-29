@@ -34,12 +34,9 @@ public class FindInMountainArray {
     public int findInMountainArray(int target, int[] arr) {
         int end=peakIndex(arr);//peak Index
         //element could be the at the peak Index or on it's either side
-        int[] ans=new int[2];//returns the min index among two
-        ans[0]=binarySearch(0,end,target,arr);
-        ans[1]=binarySearch(end,arr.length-1,target,arr);
-        if(ans[0]==-1&&ans[1]==-1)return -1;
-        if(ans[0]==-1||ans[1]==-1)return Math.max(ans[0], ans[1]);
-        else
-            return Math.min(ans[0], ans[1]);
+        int firstIdx=binarySearch(0,end,target,arr);
+        if(firstIdx!=-1)return firstIdx;
+        int secondInd=binarySearch(end,arr.length-1,target,arr);
+       return secondInd==-1?-1:Math.max(firstIdx,secondInd);
     }
 }
