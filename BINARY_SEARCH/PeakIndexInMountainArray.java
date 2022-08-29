@@ -19,7 +19,7 @@ You must solve it in O(log(arr.length)) time complexity.
             // if less :: make start as mid+1[mid+1]becoz till arr[start]--arr[mid] we cannot have a               peak element:
             if(arr[mid]<arr[mid+1])start=mid+1;
             else
-                end=mid;
+                end=mid;//decreasing part of the array :: this might be the answer but better to check in the left portion
         }return start;
     }
 }
