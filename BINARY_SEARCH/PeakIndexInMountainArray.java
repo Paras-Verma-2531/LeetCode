@@ -20,6 +20,6 @@ You must solve it in O(log(arr.length)) time complexity.
             if(arr[mid]<arr[mid+1])start=mid+1;
             else
                 end=mid;//decreasing part of the array :: this might be the answer but better to check in the left portion
-        }return start;
+        }return start;// or end as they both are at same index
     }
 }
