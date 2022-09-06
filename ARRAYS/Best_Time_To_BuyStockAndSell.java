@@ -12,15 +12,13 @@ Return the maximum profit you can achieve from this transaction
         Approach : find the min time and with each a[i] find it's profit::
         and make the max as Max(max,profit);
         return max;
-
          */
-        int max=0,min=prices[0],profit=0;
-        for(int i=0;i<prices.length;i++)
-        {
-            min=Math.min(min,prices[i]);
-            profit=prices[i]-min;
-            max=Math.max(max,profit);
-        }return max;
+        int max=-1,min=1001,profit=0;
+        for (int price : prices) {
+            min = Math.min(min, price);
+            max = Math.max(max, price - min);
+        }
+        return max;
     }
     /*
     ====================================
