@@ -14,12 +14,11 @@ public class MissingNumber {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
     public int missingNumber(int[] nums) {
         int i = 0;
         while (i < nums.length) {
             //if(arr[i]==nums.length)continue;
-            if (nums[i] != i && nums[i] != nums.length) swap(nums, nums[i], i);
+            if (nums[i] != i && nums[i] != nums.length) swap(nums, nums[i], i);//does not contain duplicate
             else
                 i++;
         }
@@ -27,4 +26,16 @@ public class MissingNumber {
             if (nums[i] != i) break;
         return i;
     }
+    /*
+    ----------------------------------
+    Another Approach without using cyclic sort
+    =================================
+    public int missingNumber(int[] nums) {
+        int res=nums.length;// To prevent index out of bound exception
+        for(int i=0;i<nums.length;i++)
+            res=res^i^nums[i];//since we know a^b^b will give a that is if both index and number of index is present
+        // they will cancel each other thus resulting in the missing number
+        return res;
+    }
+     */
 }
