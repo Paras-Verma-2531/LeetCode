@@ -28,6 +28,7 @@ else
                 prev=prev.next;
             }temp=temp.next;
         }prev.next=null;// will make the further list null
+        //[1,1,1,1,1,1,1] if prev.next is not null it will return the whole list:: therefore make prev.next as null
         return head;
     }
 }
