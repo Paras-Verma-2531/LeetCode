@@ -22,7 +22,7 @@ Explanation: There are 8 negatives number in the matrix.
     public int countNegatives(int[][] grid) {
         int sum=0;
         for(int i=0;i<grid.length;i++)
-            sum+=BinarySearch(grid[i],0,grid[i].length);//sum of negative numbers returned by method binarySearch
+            sum+=BinarySearch(grid[i],0,grid[i].length);//sum of negative numbers returned by method BinarySearch
         return sum;
     }
 }
