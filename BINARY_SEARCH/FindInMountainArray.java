@@ -36,7 +36,6 @@ public class FindInMountainArray {
         //element could be the at the peak Index or on it's either side
         int firstIdx=binarySearch(0,end,target,arr);
         if(firstIdx!=-1)return firstIdx;
-        int secondInd=binarySearch(end,arr.length-1,target,arr);
-       return binarySearch(end,arr.length-1,target,arr);
+        return binarySearch(end,arr.length-1,target,arr);
     }
 }
