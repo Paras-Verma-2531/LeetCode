@@ -1,5 +1,4 @@
 package LINKEDLIST;
-
 public class ReverseReccursive {
     /*
     Ques:: Reverse  linkedList through recursion.
@@ -7,12 +6,12 @@ public class ReverseReccursive {
     class ListNode {
       int val;
       ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+      ListNode() {}//drfault cons
+      ListNode(int val) { this.val = val; }//para cons with one value
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }// para cons with 2 value
       }
-
-    public ListNode reverseList(ListNode head) {
+      //Method to reverse a List recursively
+      public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null)
             return head;
         ListNode newhead = reverseList(head.next);
