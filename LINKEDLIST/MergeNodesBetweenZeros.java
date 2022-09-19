@@ -13,20 +13,19 @@ public class MergeNodesBetweenZeros {
     return dummy.next
      */
     public ListNode mergeNodes(ListNode head) {
-        ListNode dummy=new ListNode(-1);
-        ListNode nhead=dummy;
-        ListNode temp=head.next;int sum=0;
-        while(temp!=null)
+        ListNode newhead=new ListNode(-1);
+        ListNode temp=newhead;
+        head=head.next;
+        int sum=0;
+        while(head!=null)
         {
-            if(temp.val!=0)
-                sum+=temp.val;
+            if(head.val!=0)sum+=head.val;
             else
             {
-                ListNode newnode=new ListNode(sum);
-                nhead.next=newnode;
-                nhead=nhead.next;
+                temp.next=new ListNode(sum);
+                temp=temp.next;
                 sum=0;
-            }temp=temp.next;
-        }return dummy.next;
+            }head=head.next;
+        }return newhead.next;
     }
 }
