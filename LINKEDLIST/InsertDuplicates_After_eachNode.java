@@ -1,7 +1,5 @@
 package LINKEDLIST;
-
 import java.util.LinkedList;
-
 public class InsertDuplicates_After_eachNode {
     static class Node
     {int data;
