@@ -28,7 +28,6 @@ public class PalindromeLinkedList {
         }
         return prev;
     }
-
     public boolean isPalindrome(ListNode head) {
         if (head == null)
             return true;
