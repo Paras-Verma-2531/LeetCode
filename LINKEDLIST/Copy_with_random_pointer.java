@@ -1,6 +1,7 @@
 package LINKEDLIST;
 public class Copy_with_random_pointer {
 // Definition for a Node.
+   // https://leetcode.com/problems/copy-list-with-random-pointer/
     //Ques: make a copy of linkedlist with random pointers.
 class Node {
     int val;
@@ -11,8 +12,7 @@ class Node {
         this.next = null;
         this.random = null;
     }
-}
-     public Node copyRandomList(Node head) {
+}public Node copyRandomList(Node head) {
         Node curr = head, temp = null;
         if (head == null)
             return head;
@@ -41,6 +41,5 @@ class Node {
             copy = copy.next;
         }
         return temp;
-
-    }
+}
 }
