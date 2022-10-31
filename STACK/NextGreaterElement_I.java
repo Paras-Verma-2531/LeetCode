@@ -28,4 +28,34 @@ public class NextGreaterElement_I {
             stack.clear();
         }return nums1;
     }
+    /*
+    2nd Approach :
+    ============================================
+    traverse for the 2nd array since array 1 is the subset of 2nd.
+    And proceeds the same as done for next greater element
+    [instead of inserting them in array , put them in map]
+    ============
+    traverse for 1st array
+    and put the values of i in new array
+    and return the same.
+    once done:
+
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Map<Integer,Integer>map=new HashMap<>();
+        Stack<Integer>stack=new Stack<>();
+        int[] newarr=new int[nums1.length];
+        for(int i=nums2.length-1;i>=0;i--)
+        {
+            while(!stack.isEmpty()&&stack.peek()<=nums2[i])
+                stack.pop();
+            map.put(nums2[i],stack.isEmpty()?-1:stack.peek());
+            //newarr[i]=stack.isEmpty()?-1:stack.peek();
+            stack.push(nums2[i]);
+        }int j=0;
+       for(int i: nums1)
+       {
+           newarr[j++]=map.get(i);
+       }return newarr;
+    }
+     */
 }
