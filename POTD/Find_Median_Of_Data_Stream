@@ -1,4 +1,4 @@
-class MedianFinder {
+public class Find_Median_Of_Data_Stream {
 /*
 Ques:https://leetcode.com/problems/find-median-from-data-stream/
 */
@@ -8,7 +8,6 @@ Ques:https://leetcode.com/problems/find-median-from-data-stream/
         maxheap=new PriorityQueue<>(Collections.reverseOrder());
         minheap=new PriorityQueue<>();
     }
-    
     public void addNum(int num) {
         if(maxheap.isEmpty()||maxheap.peek()>=num)maxheap.offer(num);
         else
@@ -18,7 +17,6 @@ Ques:https://leetcode.com/problems/find-median-from-data-stream/
         else if(maxheap.size()<minheap.size())
             maxheap.offer(minheap.poll());
     }
-    
     public double findMedian() {
         if(maxheap.size()==minheap.size())return((maxheap.peek()+minheap.peek())/2.0);
         return maxheap.peek();
