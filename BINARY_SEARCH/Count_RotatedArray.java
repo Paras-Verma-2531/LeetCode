@@ -12,7 +12,7 @@ public class Count_RotatedArray {
         {
             int mid=start+(end-start)/2;
             if(mid<end&&arr[mid]>arr[mid+1])return mid+1;
-            if(mid>start&&arr[mid]<arr[mid-1])return (mid-1)+1;
+            if(mid>start&&arr[mid]<arr[mid-1])return mid;
             if(arr[start]<=arr[mid])start=mid+1;
             else
                 end=mid-1;
