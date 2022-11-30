@@ -12,6 +12,7 @@ public class Kadane_Algorithm {
             sum+=i;// make contiguous sum
             max=Math.max(sum,max);// find the max
             if(sum<0)sum=0;// if sum is < 0 :: neglect the subarray
-        }return max;
+        }
+        return max;
     }
 }
