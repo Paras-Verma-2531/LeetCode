@@ -1,0 +1,13 @@
+ class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        Map<Integer,Integer>map=new HashMap<>();
+        boolean occ[]=new boolean[1000];
+        for(int i: arr)
+          map.put(i,map.getOrDefault(i,0)+1);
+        for(int it: map.keySet())
+        {
+            if(occ[map.get(it)])return false;
+            occ[map.get(it)]=true;
+        }return true;
+    }
+}
