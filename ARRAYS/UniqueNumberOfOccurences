@@ -1,4 +1,7 @@
  class Solution {
+ /*
+ ques: https://leetcode.com/problems/unique-number-of-occurrences
+ */
     public boolean uniqueOccurrences(int[] arr) {
         Map<Integer,Integer>map=new HashMap<>();
         boolean occ[]=new boolean[1000];
