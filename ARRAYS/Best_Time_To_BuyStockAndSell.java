@@ -24,7 +24,7 @@ Return the maximum profit you can achieve from this transaction
     ====================================
      Space used:: O(n) T-->O(N)
      ===================================
-     make an array which eill store the max for each i th index [length-1....0]
+     make an array which will store the max for each i th index [length-1....0]
      now find the max using for loop [max=Math.max(max.arr[i]-prices[i]);
      return max;
      ----------------------------------
