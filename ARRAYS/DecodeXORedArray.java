@@ -18,7 +18,7 @@ Return the original array arr. It can be proved that the answer exists and is un
             for(int i=1;i<=encoded.length;i++)
             {
             newarr[i]=encoded[i-1]^newarr[i-1];
-             */
+            */
         }return newarr;
     }
 }
