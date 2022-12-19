@@ -13,7 +13,7 @@ Explanation: There are 8 negatives number in the matrix.
         while(start<end)
         {
             int mid=start+(end-start)/2;
-            if(arr[mid]<0)end=mid;// if ele is <0 make end as mid
+            if(arr[mid]<0)end=mid;// if element is <0 make end as mid
                 //basic idea is if arr[mid]<0 then arr[mid+1]---length will be <0
             else
                 start=mid+1;//else start as mid +1
