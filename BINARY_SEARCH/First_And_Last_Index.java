@@ -39,6 +39,7 @@ If target is not found in the array, return [-1, -1].
         int[] arr= new int[2];
         arr[0]=findFirst(nums,target);
         arr[1]=findLast(nums,target);
+        
         return arr;
     }
 }
