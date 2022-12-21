@@ -33,6 +33,7 @@ public class Guess_Number_Higher_Lower extends guessGame {
             else if(guess(mid)==1)start=mid+1;
             else
                 end=mid-1;
-        }return start;
+        }
+        return start;
     }
 }
