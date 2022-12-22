@@ -30,6 +30,7 @@ arr[i] == 2 * arr[j]
                     //for -,it's half would be in range[i+1,i+2,---length-1]therefore set,start as i+1
                     val2= binarySearch(arr,i+1,arr.length-1,arr[i]/2);
             }if(val1||val2)return true;// if either of them is true return true:
-        }return false;
+        }
+return false;
     }
 }
