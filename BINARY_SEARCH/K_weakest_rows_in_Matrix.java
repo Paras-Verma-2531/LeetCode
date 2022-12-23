@@ -43,6 +43,7 @@ Return the indices of the k weakest rows in the matrix ordered from weakest to s
         int[] newarr=new int[k];
         // k weakest soldiers
         System.arraycopy(idxarr, 0, newarr, 0, k);
-        return newarr;
+       
+ return newarr;
     }
 }
