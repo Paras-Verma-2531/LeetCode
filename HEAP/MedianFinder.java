@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 public class MedianFinder {
     /*
     Ques: The median is the middle value in an ordered integer list.
-    If the size of the list is even, there is no middle value and the median is the mean of the two middle values.
+    If the size of the list is even, there is no middle value then the median is the mean of the two middle values.
 For example, for arr = [2,3,4], the median is 3.
 For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
 ============================================================
@@ -35,7 +35,7 @@ else maxpeek
     public void addNum(int num) {
         if (maxheap.isEmpty() || maxheap.peek() >= num) maxheap.offer(num);
         else
-            minheap.offer(num);
+            minheap.offer(num);//min of larger values[greater val]
         if (maxheap.size() > minheap.size() + 1)
             minheap.offer(maxheap.poll());
         else if (maxheap.size() < minheap.size())
