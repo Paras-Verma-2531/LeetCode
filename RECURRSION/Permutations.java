@@ -19,11 +19,31 @@ public class Permutations {
             }
         }
     }
+    //2ndcApproach :: no use of extra space i,e boolean array instead use swaping technique
+    private static void swap(int[]arr,int i,int j) {
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
+    private static void helper(int[]nums,int index,List<Integer>list) {
+        if (index == nums.length) {
+            for(int j:nums)
+                list.add(j);
+            System.out.println(list);
+            list.clear();
+            return;
+        }
+        for (int i = index; i < nums.length; i++) {
+            swap(nums, index, i);
+            helper(nums, index + 1, list);
+            swap(nums, index, i);
+        }
+    }
     public static void main(String[] args) {
        int[] nums={1,2,3};
        boolean[] arr=new boolean[nums.length];
         Arrays.fill(arr,false);
-        helper(nums,arr,new ArrayList <Integer>());
+        helper(nums,0,new ArrayList <Integer>());
     }
 }
 
