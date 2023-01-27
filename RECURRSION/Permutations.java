@@ -10,16 +10,16 @@ public class Permutations {
         }
         for (int i = 0; i < nums.length; i++) {
             if (!arr[i]) {// if and only if the element has not marked
-                arr[i]=true;
+                arr[i]=true;//set as marked
                 list.add(nums[i]);
                 helper(nums, arr, list);
                 list.remove(list.size() - 1);
-                arr[i]=false;
+                arr[i]=false;//set as unmarked
 
             }
         }
     }
-    //2ndcApproach :: no use of extra space i,e boolean array instead use swaping technique
+    //2nd :: Approach :: no use of extra space i,e boolean array instead use swaping technique
     private static void swap(int[]arr,int i,int j) {
         int temp=arr[i];
         arr[i]=arr[j];
