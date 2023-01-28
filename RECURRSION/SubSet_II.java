@@ -29,6 +29,7 @@ public class SubSet_II {
         for(int i=index;i<arr.length;i++)
         {
             if(i!=index&&arr[i]==arr[i-1])continue;// if at each level we have same elements i,e == i-1 do not pick them
+            //prevents usage of Set ds.
             ans.add(arr[i]);
             helper(arr,i+1,finalList,ans);
             ans.remove(ans.size()-1);
