@@ -15,20 +15,34 @@ else
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
   }
   public class RemoveDuplicates {
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy=new ListNode(-2,head);
-        if(head==null)
-            return head;
-        ListNode temp=head,prev=dummy;
-        while(temp!=null)
-        {
-            if(temp.val!=prev.val)
-            {
-                prev.next=temp;
-                prev=prev.next;
-            }temp=temp.next;
-        }prev.next=null;// will make the further list null
-        //[1,1,1,1,1,1,1] if prev.next is not null it will return the whole list:: therefore make prev.next as null
-        return head;
-    }
-}
+      //new Approach:: no use of prev pointer:;
+      public ListNode deleteDuplicates(ListNode head) {
+          if (head == null || head.next == null) return head;
+          ListNode newList = new ListNode(-1);
+          ListNode temp = newList;
+          while (head.next != null) {
+              if (head.val != head.next.val) {
+                  temp.next = head;
+                  temp = temp.next;
+              }
+              head = head.next;
+          }
+          temp.next = head;
+          return newList.next;
+      }
+//    public ListNode deleteDuplicates(ListNode head) {
+//        ListNode dummy=new ListNode(-2,head);
+//        if(head==null)
+//            return head;
+//        ListNode temp=head,prev=dummy;
+//        while(temp!=null)
+//        {
+//            if(temp.val!=prev.val)
+//            {
+//                prev.next=temp;
+//                prev=prev.next;
+//            }temp=temp.next;
+//        }prev.next=null;// will make the further list null
+      //[1,1,1,1,1,1,1] if prev.next is not null it will return the whole list:: therefore make prev.next as null
+//        return head;
+  }
