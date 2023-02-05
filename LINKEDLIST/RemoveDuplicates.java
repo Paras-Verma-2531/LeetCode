@@ -1,6 +1,7 @@
 package LINKEDLIST;
 /* Definition for singly-linked list.
-Ques:: remove the duplicates from the  Sorted list;
+Ques:: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+remove the duplicates from the  Sorted list;
 Approach : use the dummy pointer which points to head and initialize temp with head and prev with dummy.
 if temp.val==prev.val[move temp to temp.next;]
 else
