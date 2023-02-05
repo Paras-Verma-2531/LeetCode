@@ -1,11 +1,10 @@
 package LINKEDLIST;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
 public class Intersection_of_two_LinkedList {
     /*
-    Ques: Find the intersection of two LinkedList:
+    Ques: https://leetcode.com/problems/intersection-of-two-linked-lists/
+    Find the intersection of two LinkedList:
     Approach: add the nodes of first ll to hashmap;
     insert dummy node at the beg of second ll.
     traverse from second ll and iff curr.next is present in map return node else null;
@@ -20,7 +19,6 @@ public class Intersection_of_two_LinkedList {
             next = null;
         }
     }
-
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
          /*
          ==========================================
