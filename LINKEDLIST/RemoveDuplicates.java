@@ -2,6 +2,7 @@ package LINKEDLIST;
 /* Definition for singly-linked list.
 Ques:: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 remove the duplicates from the  Sorted list;
+////////////////////////////////////////
 Approach : use the dummy pointer which points to head and initialize temp with head and prev with dummy.
 if temp.val==prev.val[move temp to temp.next;]
 else
@@ -32,7 +33,7 @@ else
           return newList.next;
       }
 //    public ListNode deleteDuplicates(ListNode head) {
-//        ListNode dummy=new ListNode(-2,head);
+//        ListNode dummy=new ListNode(-101,head);
 //        if(head==null)
 //            return head;
 //        ListNode temp=head,prev=dummy;
