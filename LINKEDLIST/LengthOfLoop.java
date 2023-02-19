@@ -34,10 +34,10 @@ public class LengthOfLoop {
         if(loop==null)
             return 0;
         Node curr=loop;//set curr as loop
-        int count=1;
+        int count=0;
         while(curr.next!=loop)//run the loop till curr.next!=loop[which means we heave reached the node from where we started]
         {
             curr=curr.next;count++;//make count++
-        }return count;
+        }return count+1;
     }
 }
