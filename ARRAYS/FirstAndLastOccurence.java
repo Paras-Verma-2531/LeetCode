@@ -1,5 +1,5 @@
 package ARRAYS;
-
+import java.util.Arrays;
 public class FirstAndLastOccurence {
     /*
     https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
