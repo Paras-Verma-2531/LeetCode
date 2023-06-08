@@ -1,4 +1,4 @@
-package ARRAYS;
+package ARRAYS.BINARY_SEARCH;
 import java.util.Arrays;
 public class FirstAndLastOccurence {
     /*

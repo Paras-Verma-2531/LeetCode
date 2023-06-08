@@ -1,4 +1,4 @@
-package ARRAYS;
+package ARRAYS.BINARY_SEARCH;
 public class PeakIndex {
     /*
     Ques: find the peak index in the given array:

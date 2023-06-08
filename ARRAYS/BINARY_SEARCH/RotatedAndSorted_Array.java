@@ -1,4 +1,4 @@
-package ARRAYS;
+package ARRAYS.BINARY_SEARCH;
 public class RotatedAndSorted_Array {
     /*
     Ques:: There is an integer array nums sorted in ascending order (with distinct values).

@@ -1,4 +1,4 @@
-package ARRAYS;
+package ARRAYS.BINARY_SEARCH;
 public class RotatedSortedII {
     /*
     https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
