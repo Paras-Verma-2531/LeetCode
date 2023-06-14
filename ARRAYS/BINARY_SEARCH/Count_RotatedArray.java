@@ -1,4 +1,4 @@
-package BINARY_SEARCH;
+package ARRAYS.BINARY_SEARCH;
 public class Count_RotatedArray {
     /*
     Ques: Given an ascending sorted rotated array Arr of distinct integers of size N.

@@ -1,4 +1,4 @@
-package BINARY_SEARCH;
+package ARRAYS.BINARY_SEARCH;
 import java.util.Arrays;
 public class If_N_And_its_Double_Exists {
     /*
