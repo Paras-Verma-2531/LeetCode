@@ -8,9 +8,12 @@ public class TopView {
         queue.add(new Pair(0, root));
         while (!queue.isEmpty()) {
             Pair pair = queue.poll();
+            //topView
             if (!map.containsKey(pair.hd)) {
                 map.put(pair.hd, pair.node.val);
             }
+            //bottomView
+            //map.put(pair.hd, pair.node.val);
             if (pair.node.left != null) queue.offer(new Pair(pair.hd - 1, pair.node.left));
             if (pair.node.right != null) queue.offer(new Pair(pair.hd + 1, pair.node.right));
         }
