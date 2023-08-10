@@ -15,19 +15,37 @@ public class LongestConsecutiveSubsequence {
         }return false;
     }
     public static int longestSuccessiveElements(int []a) {
-        // Write your code here.
+        // Brute force Approach:: O(n^2)
+//         Arrays.sort(a);
+//        int longest=1;
+//        for(int i=0;i<a.length;i++)
+//        {
+//            int x=a[i];
+//            int count=1;
+//            while(binarySearch(a, x+1))
+//            {
+//                count++;
+//                x=x+1;
+//            }
+//            longest=Math.max(longest, count);
+//        }return longest;
+        //Better Approach : O(nlogn)
         Arrays.sort(a);
-        int longest=1;
+        int prevSmallest=Integer.MIN_VALUE;int longest=1,count=0;
         for(int i=0;i<a.length;i++)
         {
-            int x=a[i];
-            int count=1;
-            while(binarySearch(a, x+1))
+
+            if(a[i]-1==prevSmallest)
             {
+                prevSmallest=a[i];
                 count++;
-                x=x+1;
             }
-            longest=Math.max(longest, count);
+            else if(a[i]!=prevSmallest)
+            {
+                prevSmallest=a[i];
+                count=1;
+            }
+            longest=Math.max(count, longest);
         }return longest;
     }
 }
